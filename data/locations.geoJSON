@@ -1,0 +1,22 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0060, 40.7128]
+      },
+      "properties": {
+        "title": "Test Location",
+        "description": "This is a test popup.",
+        "media": [
+          {
+            "type": "image",
+            "src": "media/images/test.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}
