@@ -8,6 +8,33 @@ fetch('data/locations.geojson')
     .then(res => res.json())
     .then(data => {
     L.geoJSON(data, {
+        style: function(feature) {
+            const category = feature.properties.category;
+            if (category === 'roadtrip') {
+                return { color: 'gray' };
+            } else if (category === 'hike') {
+                return { color: 'green' };
+            } else if (category === 'observation') {
+                return { color: 'red' };
+            } else {
+                return { color: 'blue' };
+            }
+        },
+        pointToLayer: function(feature, latlng) {
+            const props = feature.properties;
+            if (props.markerImage) {
+                const photoIcon = L.icon({
+                    iconUrl: props.markerImage,
+                    iconSize: [30, 30],
+                    iconAnchor: [15, 30],
+                    popupAnchor: [0, -30],
+                    className: "photo-marker"
+                });
+
+                return L.marker(latlng, { icon: photoIcon });
+            }
+            return L.marker(latlng);
+        },
         onEachFeature: function (feature, layer) {
             const props = feature.properties;
 

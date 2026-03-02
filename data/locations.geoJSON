@@ -8,7 +8,12 @@
         "coordinates": [-74.0060, 40.7128]
       },
       "properties": {
+        "featureType": "poi", 
+        "category": "observation",
+        "activities": ["birding", "photography"],
         "title": "Test Location",
+        "markerImage": "media/markers/test_marker.jpg",
+        "date": "2024-06-01",
         "description": "This is a test popup.",
         "media": [
           {
@@ -16,6 +21,70 @@
             "src": "media/images/test.jpg"
           }
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-122.4194, 37.7749],
+          [-121.8947, 36.6002],
+          [-121.8081, 36.2704]
+        ]
+      },
+      "properties": {
+        "featureType": "route",
+        "category": "roadtrip",
+        "activities": ["photography"],
+        "title": "San Francisco to Big Sur",
+        "date": "2024-06-15",
+        "description": "Coastal drive along Highway 1 with multiple scenic overlooks.",
+        "distance_km": 210,
+        "media": [
+          {
+            "type": "image",
+            "src": "media/images/big_sur_1.jpg"
+          },
+          {
+            "type": "image",
+            "src": "media/images/big_sur_2.jpg"
+          }
+        ],
+        "tags": ["california", "coast", "highway1"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-121.505, 38.576],
+          [-121.506, 38.577],
+          [-121.508, 38.579],
+          [-121.509, 38.580]
+        ]
+      },
+      "properties": {
+        "featureType": "route",
+        "category": "hike",
+        "activities": ["birding", "photography"],
+        "title": "Oak Grove Loop Trail",
+        "date": "2024-04-22",
+        "description": "Morning loop through mixed oak woodland. Notable warbler activity.",
+        "distance_km": 4.2,
+        "elevation_gain_m": 120,
+        "media": [
+          {
+            "type": "image",
+            "src": "media/images/oak_trail_1.jpg"
+          },
+          {
+            "type": "audio",
+            "src": "media/audio/warbler_song.mp3"
+          }
+        ],
+        "tags": ["oak woodland", "spring migration"]
       }
     }
   ]
