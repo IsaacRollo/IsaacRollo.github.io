@@ -8,6 +8,7 @@ fetch('data/locations.geojson')
     .then(res => res.json())
     .then(data => {
     L.geoJSON(data, {
+        renderer: L.canvas(),
         style: function(feature) {
             const category = feature.properties.category;
             if (category === 'roadtrip') {
